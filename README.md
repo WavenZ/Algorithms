@@ -13,7 +13,9 @@ You may assume that each input would have exactly one solution, and you may not 
 
 **思路：**
 对数组进行遍历，用哈希表保存已经遍历过的数及其下标，对于当前迭代的数num，如果哈希表中已经存在target-num，则查找成功。
-```
+
+**代码：**
+```cpp
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
