@@ -37,8 +37,8 @@ public:
 You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.\
 You may assume the two numbers do not contain any leading zero, except the number 0 itself.\
 **样例:**
-> Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
-> Output: 7 -> 0 -> 8
+> Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)\
+> Output: 7 -> 0 -> 8\
 > Explanation: 342 + 465 = 807.
 
 **思路：**
@@ -84,5 +84,74 @@ public:
         }
         return l3;
     }
+};
+```
+
+## 3. Longest Substring Without Repeating Characters
+**题目：**\
+Given a string, find the length of the longest substring without repeating characters.
+**样例:**
+> Input: "abcabcbb"\
+> Output: 3 \
+> Explanation: The answer is "abc", with the length of 3. 
+
+**思路：**
+直接暴力搜索，此方法有待优化。
+
+**代码：**
+```cpp
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        int start = 0;
+        int end = 0;
+        int max = 0;
+        for(int i = 0; i < s.size(); i++){
+            for(int j = start; j < end; j++){
+                if(s[j] == s[i]) start = j+1;
+            }
+            end++;
+            if(end-start > max) max = end-start;
+        }
+        return max;
+    }
+    
+};
+```
+
+## 4. Median of Two Sorted Arrays
+**题目：**\
+There are two sorted arrays nums1 and nums2 of size m and n respectively.\
+
+Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).\
+
+You may assume nums1 and nums2 cannot be both empty.
+**样例:**
+> nums1 = [1, 3]\
+> nums2 = [2]\
+
+> The median is 2.0
+
+**思路：**
+直接暴力搜索，此方法有待优化。
+
+**代码：**
+```cpp
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        int start = 0;
+        int end = 0;
+        int max = 0;
+        for(int i = 0; i < s.size(); i++){
+            for(int j = start; j < end; j++){
+                if(s[j] == s[i]) start = j+1;
+            }
+            end++;
+            if(end-start > max) max = end-start;
+        }
+        return max;
+    }
+    
 };
 ```
