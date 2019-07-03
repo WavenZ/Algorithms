@@ -1,6 +1,6 @@
 # Algorithms
 
-Leecode刷题记录
+Leecode记录
 
 **1. Two Sum**\
 Given an array of integers, return indices of the two numbers such that they add up to a specific target.\
